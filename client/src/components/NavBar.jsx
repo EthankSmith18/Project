@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-      <div className="container">
+      <div className="container-fluid">
         <Link className="nav-link" to="/birds" >
           <span className="navbar-brand">Find My Bird</span>
         </Link>
@@ -20,12 +20,17 @@ function NavBar() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link" to="/birds">
-                All Sightings
+                User Sightings
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/birds/new">
                 Add Sighting
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/sighting">
+                Recent Sightings
               </Link>
             </li>
           </ul>

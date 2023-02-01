@@ -7,9 +7,7 @@ const birdSchema = new mongoose.Schema(
     },
     zip: {
       type: Number,
-      required: [true, 'Zip code is required.'],
-      minlength: [5, 'Zip code must be 5 digits.'],
-      maxlength: [5, 'Zip code must be 5 digits.']
+      required: [true, 'Five digit Zip Code is required.'],
     },
     activity: {
       type: String,
@@ -17,14 +15,15 @@ const birdSchema = new mongoose.Schema(
     },
     image: {
       type: String,
+      required: [true, 'Image URL is required.'],
     },
     color: {
       type: String,
       required: [true, "Please enter the primary color."],
     },
     date: {
-      type: String,
-      required: [true, "Please enter the date witnessed."],
+      type: Date,
+      required: [true, "Please enter the date sighted."],
     },
     },
   { timestamps: true }

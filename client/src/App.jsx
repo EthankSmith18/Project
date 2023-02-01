@@ -7,6 +7,7 @@ import Birds from './components/Birds';
 import NewBird from './components/NewBird';
 import EditBird from './components/EditBird';
 import OneBird from './components/OneBird';
+import BirdSightings from './components/BirdSightings';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <div className="container">
         <Routes>
           <Route path='/' element ={<Navigate to='/birds' />} />
+          <Route path='sighting' element={<BirdSightings />} />
           <Route path='/birds' element={<Birds />}>
               <Route index element={<AllBirds />} />
               <Route path='new' element={<NewBird />} />
