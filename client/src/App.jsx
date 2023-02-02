@@ -1,5 +1,5 @@
 import React from 'react'
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./bootstrap.css";
 import NavBar from './components/NavBar';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import AllBirds from './components/AllBirds';
