@@ -11,3 +11,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+section {
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/hedgehog.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.services {
+  position: relative;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.services::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/hedgehog2.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.bg-faded {
+  background-color: rgba(0, 0, 0, .2);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #252525;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkgreen;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

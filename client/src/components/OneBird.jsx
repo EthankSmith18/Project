@@ -31,34 +31,36 @@ function OneBird() {
 
 
   return (
-    <div className="d-flex justify-content-center">
+    <div className="container">
+      <div className="d-flex justify-content-center">
       
-      <div className="card mt-3 w-50">
-        {bird && (
-          <div className="container">
-            <>
-              <img src={bird.image} className="card-img-top mt-3" alt={bird.name}></img>
-              <div className="card-body">
-                <h5 className="card-title">Your {bird.name} Sighting</h5>
-                <p className="card-text">Name: {bird.name}</p>
-                <p className="card-text">Location: {bird.zip}</p>
-                <p className="card-text">Activity: {bird.activity}</p>
-                <p className="card-text">Color: {bird.color}</p>
-                <p className="card-text">Date Seen: {bird.date}</p>
-              </div>
-            </>
+        <div className="card mt-3 w-50">
+          {bird && (
+            <div className="container">
+              <>
+                <img src={bird.image} className="card-img-top mt-3" alt={bird.name}></img>
+                <div className="card-body">
+                  <h5 className="card-title">Your {bird.name} Sighting</h5>
+                  <p className="card-text">Name: {bird.name}</p>
+                  <p className="card-text">Location: {bird.zip}</p>
+                  <p className="card-text">Activity: {bird.activity}</p>
+                  <p className="card-text">Color: {bird.color}</p>
+                  <p className="card-text">Date Seen: {bird.date}</p>
+                </div>
+              </>
+            </div>
+          )}
+          <div className="card-footer d-flex justify-content-end ">
+            <Link
+              className="btn btn-sm btn-warning me-2"
+              to={`/birds/${id}/edit`}
+            >
+              Edit
+            </Link>
+            <button className="btn btn-sm btn-danger" onClick={() => handleDelete(bird._id)}>
+              Delete
+            </button>
           </div>
-        )}
-        <div className="card-footer d-flex justify-content-end ">
-          <Link
-            className="btn btn-sm btn-warning me-2"
-            to={`/birds/${id}/edit`}
-          >
-            Edit
-          </Link>
-          <button className="btn btn-sm btn-danger" onClick={() => handleDelete(bird._id)}>
-            Delete
-          </button>
         </div>
       </div>
     </div>

@@ -42,7 +42,7 @@ function BirdSightings() {
 
 
   return (
-    <>
+    <div className='container'>
       <div className='d-flex justify-content-center'>
         <div className="card mb-3 mt-3 w-50">
           <div className="card-body">
@@ -104,7 +104,7 @@ function BirdSightings() {
                   <option value="UT">Utah</option>
                   <option value="VT">Vermont</option>
                   <option value="VA">Virginia</option>
-                  <option value="WA">Washinton</option>
+                  <option value="WA">Washington</option>
                   <option value="WV">West Virginia</option>
                   <option value="WI">Wisconsin</option>
                   <option value="WY">Wyoming</option>
@@ -152,7 +152,7 @@ function BirdSightings() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
